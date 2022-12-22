@@ -13,16 +13,43 @@ export default function CategoryId({ blogs }: Props) {
     return <div>ブログコンテンツがありません</div>;
   }
   return (
-    <div className="">
-      <ul>
-        {blogs.map(blog => (
-          <li key={blog.id}>
-            <Link href={`/blog/${blog.id}`}>
-              <a>{blog.title}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <div className="pt-16">
+        <div className="grid grid-cols-3 gap-2 px-2">
+            <div className="content bg-white col-span-2">
+                <div className="container w-auto justify-between px-4 pt-4 pb-12">
+                    <div>
+                        {blogs.map(blog => (
+                            <div className="rounded overflow-hidden shadow-lg mb-3 mx-3 bg-white" key={blog.id}>
+                                {/* 画像の表示 */}
+                                    <Link href={`/blog/${blog.id}`} passHref>
+                                        <img
+                                        className=" w-fit"
+                                        src={blog.eyecatch.url}
+                                        alt="Sunset in the mountains"
+                                        />
+                                    </Link>
+
+                                    {/* ブログのタイトル */}
+                                    <div className="px-6 py-4">
+                                        <Link href={`/blog/${blog.id}`} passHref>
+                                        <div className='font-bold'>{blog.title}</div>
+                                        </Link>
+                                    </div>
+
+                                    {/* タグの表示 */}
+                                    <div className="px-6 pt-4 pb-2">
+                                        {blog.tag && (
+                                        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                                            #{blog.tag.name}
+                                        </span>
+                                        )}
+                                    </div>
+                                </div>
+                            ))}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
   );
 }
