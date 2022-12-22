@@ -13,7 +13,7 @@ export default function CategoryId({ blogs }: Props) {
     return <div>ブログコンテンツがありません</div>;
   }
   return (
-    <div>
+    <div className="">
       <ul>
         {blogs.map(blog => (
           <li key={blog.id}>

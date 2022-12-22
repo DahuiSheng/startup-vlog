@@ -70,7 +70,7 @@ export default function Home( { blogs, tag}: Props ) {
               <ul>
                 {tag.map((tag) => (
                   <div className="rounded w-3/5 overflow-hidden h-8 shadow-lg mb-1 mx-1 px-1 bg-white" key={tag.id}>
-                    <Link href={`/category/${tag.id}`}>
+                    <Link href={`/tag/${tag.id}`}>
                       {tag.name}
                     </Link>
                   </div>
@@ -86,12 +86,12 @@ export default function Home( { blogs, tag}: Props ) {
 // 投稿データとタグデータをAPIより取得
 export const getStaticProps = async () => {
   const data = await client.get({ endpoint: 'blogs', });
-  const categoryData = await client.get({ endpoint: 'tag' });
+  const tagData = await client.get({ endpoint: 'tag' });
 
   return {
     props: {
       blogs: data.contents,
-      tag: categoryData.contents,
+      tag: tagData.contents,
     },
   };
 };
