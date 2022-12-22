@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
 
         // 画面上部に固定
-        <div className="navbar fixed z-50 bg-white opacity-100">
+        <div className="navbar fixed z-50 bg-white opacity-100 shadow-md">
 
             {/* タイトル：　 */}
             <div className="flex-1">
