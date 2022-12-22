@@ -24,11 +24,6 @@ export default function Home( { blogs, tag}: Props ) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="">
-        {/* ヘッダー */}
-        <div className="navbar bg-orange-300">
-          <a className="btn btn-ghost normal-case text-xl text-white">daisyUI</a>
-        </div>
-
           {/* グリッドを二つに分ける */}
           <div className='grid grid-cols-3 gap-2 px-2'>
 
