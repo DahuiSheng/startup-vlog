@@ -41,7 +41,7 @@ const Navbar = () => {
                             startup-vlogとは
                         </Link>
                         <Link href={"/author"} className="btn btn-ghost">
-                            <li>運営者について</li>
+                            運営者について
                         </Link>
                         <Link href={"/inquiry"} className="btn btn-ghost">
                             お問い合わせ
