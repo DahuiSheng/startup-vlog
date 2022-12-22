@@ -25,15 +25,15 @@ export default function Home( { blogs, tag}: Props ) {
       </Head>
       <main className="">
         {/* ヘッダー */}
-        <div className="navbar bg-base-100">
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <div className="navbar bg-orange-300">
+          <a className="btn btn-ghost normal-case text-xl text-white">daisyUI</a>
         </div>
 
           {/* グリッドを二つに分ける */}
           <div className='grid grid-cols-3 gap-2 px-2'>
 
             {/* ブログの一覧を表示する コラムの大きさ：2 */}
-            <div className="content bg-green-300 col-span-2">
+            <div className="content bg-white col-span-2">
 
               <div className="container w-auto justify-between px-4 pt-4 pb-12">
                 {/* 記事のマッピング */}
