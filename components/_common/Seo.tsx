@@ -8,11 +8,11 @@ interface MetaData {
 }
 
 const Seo = ({ pageTitle, pageUrl, pageOgImage, noIndex = false }: MetaData) => {
-    const defaultTitle = "NGC";
+    const defaultTitle = "startup-vlog";
     const title = pageTitle ? `${pageTitle} | ${defaultTitle}` : defaultTitle;
-    const description = "名古屋でハイキャリアを目指すならNGC";
-    const siteName = "NGC";
-    const domain = "ngc.vercel.app";
+    const description = "startupが好きな男のブログ";
+    const siteName = "startup-vlog";
+    const domain = "startup-vlog.vercel.app";
     const url = pageUrl ? `https://${domain}/${pageUrl}/` : `https://${domain}`;
     const ogImage = pageOgImage || `https://${domain}/ogp.png`;
 
