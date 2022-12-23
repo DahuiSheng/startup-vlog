@@ -14,7 +14,7 @@ type Props = {
   tag: Array<Tag>
 }
 
-export default function Home( { blogs, tag}: Props ) {
+export default function Home( { blogs, tag}: Props ) { 
   return (
     <>
       <main className="pt-16">
