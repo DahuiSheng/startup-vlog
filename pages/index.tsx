@@ -67,15 +67,17 @@ export default function Home( { blogs, tag}: Props ) {
               <div className='text-2xl font-bold pb-3'>
                 タグ
               </div>
-              <ul>
-                {tag.map((tag) => (
-                  <div className="rounded w-3/5 overflow-hidden h-8 shadow-lg mb-1 mx-1 px-1 bg-white" key={tag.id}>
-                    <Link href={`/tag/${tag.id}`}>
-                      {tag.name}
-                    </Link>
-                  </div>
-                ))}
-              </ul>
+              <div className='rounded w-64 xl:84 shadow-lg bg-white '>
+                <ul>
+                  {tag.map((tag) => (
+                    <div className="overflow-hidden h-8 mb-1 mx-1 px-1 bg-white" key={tag.id}>
+                      <Link href={`/tag/${tag.id}`}>
+                        {tag.name}
+                      </Link>
+                    </div>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
       </main>
