@@ -19,9 +19,6 @@ const Navbar = () => {
                     <Link href={"/about"} className="btn btn-ghost">
                         <li>startup-vlogとは</li>
                     </Link>
-                    <Link href={"/author"} className="btn btn-ghost">
-                        <li>運営者について</li>
-                    </Link>
                     <Link href={"/inquiry"} className="btn btn-ghost">
                         <li>お問い合わせ</li>
                     </Link>
@@ -39,9 +36,6 @@ const Navbar = () => {
                     <div className="card-body">
                         <Link href={"/about"} className="btn btn-ghost">
                             startup-vlogとは
-                        </Link>
-                        <Link href={"/author"} className="btn btn-ghost">
-                            運営者について
                         </Link>
                         <Link href={"/inquiry"} className="btn btn-ghost">
                             お問い合わせ
